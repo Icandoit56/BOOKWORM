@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book Review — BookWorm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Small additions specifically for the Book Review page layout */
+        .review-section {
+            margin-top: 28px;
+        }
+        
+        /* Using the same grid definition as .books-row for review cards */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        /* Styling for the review card */
+        .review-card-item {
+            /* Inherit general .card styles but adjust for review content */
+            background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.93));
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 10px 22px rgba(30,8,20,0.06);
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+        .review-card-item:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(30,8,20,0.12); }
+        
+        .review-card-item h4 { 
+            color: #3b1a2d; 
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .review-card-item .reviewed-book {
+            color: #7a5368;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .review-rating {
+            color: #ffd700; /* Gold color for stars */
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin: 8px 0 10px;
+        }
+        .review-card-item .review-text {
+            color: #5b2f44;
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        /* Responsive adjustments for the grid */
+        @media (max-width:1100px) {
+            .reviews-grid { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width:700px) {
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <header class="header">
+            <h1>BookWorm</h1>
+            <p>Where readers find stories that stay with them.</p>
+        </header>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="recommendations.html">Recommendations</a>
+            <a href="book_reviews.html">Book Review</a> <a href="add_book.html">Add Book</a>
+            <a href="search.html">Search</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <main class="container">
+            <h2 class="section-title">Community Reviews</h2>
+
+            <section class="review-section">
+                
+                <div class="reviews-grid">
+                    
+                    <article class="review-card-item">
+                        <h4>Fable of the Heart</h4>
+                        <div class="reviewed-book">Reviewed: The Alchemist</div>
+                        <div class="review-rating">★★★★★</div>
+                        <div class="review-text">A simple, yet profound story about destiny and following your personal legend. Its message is timeless and provides a beautiful sense of hope and purpose. Truly life-changing.</div>
+                    </article>
+
+                    <article class="review-card-item">
+                        <h4>Witty & Timeless Romance</h4>
+                        <div class="reviewed-book">Reviewed: Pride and Prejudice</div>
+                        <div class="review-rating">★★★★☆</div>
+                        <div class="review-text">Austen’s wit is unmatched! The slow-burn dynamic between Elizabeth and Mr. Darcy is expertly crafted. A delightful classic that is still sharp and relevant today.</div>
+                    </article>
+
+                    <article class="review-card-item">
+                        <h4>Masterclass in Manipulation</h4>
+                        <div class="reviewed-book">Reviewed: Gone Girl</div>
+                        <div class="review-rating">★★★★★</div>
+                        <div class="review-text">This book is a psychological rollercoaster. The unreliable narration keeps you guessing until the final page. Dark, disturbing, and one of the best thrillers of the decade.</div>
+                    </article>
+
+                    <article class="review-card-item">
+                        <h4>Cozy Fantasy Adventure</h4>
+                        <div class="reviewed-book">Reviewed: The Hobbit</div>
+                        <div class="review-rating">★★★★☆</div>
+                        <div class="review-text">A perfect gateway to high fantasy. It's warm, charming, and full of memorable characters and creatures. A delightful tale for any age.</div>
+                    </article>
+
+                    <article class="review-card-item">
+                        <h4>Practical Guide to Change</h4>
+                        <div class="reviewed-book">Reviewed: Atomic Habits</div>
+                        <div class="review-rating">★★★★★</div>
+                        <div class="review-text">The most actionable self-help book I've read. James Clear breaks down habit formation into simple, digestible steps. Highly effective and motivating.</div>
+                    </article>
+
+                    <article class="review-card-item">
+                        <h4>Raw Study of Intimacy</h4>
+                        <div class="reviewed-book">Reviewed: Normal People</div>
+                        <div class="review-rating">★★★☆☆</div>
+                        <div class="review-text">Beautifully written, though often painful to read. The focus on communication issues felt very real, making it a powerful, if sometimes frustrating, character study.</div>
+                    </article>
+
+                </div>
+                
+            </section>
+        </main>
+
+        <footer style="text-align:center; padding:20px; color:#fff6fb;">
+            BookWorm, Created by Khushi Kumari
+        </footer>
+    </div>
+</body>
+</html>

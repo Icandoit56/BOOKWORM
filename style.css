@@ -1,0 +1,154 @@
+/* BookWorm — WhisperTales-inspired theme (purple/pink glass + cozy background) */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  color: #1b0b12;
+  background-image: url('https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/527/reading_aesthetic_c_shutterstock.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* translucent page wrapper to make content readable */
+.page-wrap {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+  min-height:100vh;
+  backdrop-filter: blur(8px) saturate(1.08);
+  padding-bottom:60px;
+}
+
+/* header */
+.header {
+  text-align: center;
+  padding: 48px 20px;
+  background: linear-gradient(180deg, rgba(36,9,23,0.62), rgba(79,22,57,0.5));
+  color: #fff7fb;
+  box-shadow: 0 6px 18px rgba(15,6,10,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.header h1 { font-size: 2.6rem; letter-spacing: 1px; margin-bottom:6px; }
+.header p { color: #f7e9f4; opacity:0.95; }
+
+/* nav */
+.nav {
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  background: rgba(249, 249, 249, 0.979);
+  padding: 12px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav a {
+  text-decoration:none;
+  color:#3b1a2d;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:8px;
+  transition: all .22s ease;
+}
+.nav a:hover { background: linear-gradient(90deg,#e9badf,#f6d4ed); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(159,57,142,0.15); }
+
+/* container */
+.container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* hero */
+.hero {
+  text-align:center;
+  margin: 8px auto 28px;
+  padding: 36px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  box-shadow: 0 8px 24px rgba(18,6,11,0.25);
+  backdrop-filter: blur(6px);
+}
+.hero h2 { font-size:2rem; color:#fff6fb; margin-bottom:10px; }
+.hero p { color: #fff0f7; opacity:0.95; line-height:1.5; max-width:900px; margin:0 auto 12px; }
+.cta-btn {
+  display:inline-block;
+  margin-top:14px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-weight:700;
+  color:#3b0630;
+  background: linear-gradient(90deg,#ffd3f1,#e8a6e6);
+  box-shadow: 0 6px 20px rgba(185,72,150,0.18);
+  transition: transform .18s ease;
+}
+.cta-btn:hover { transform: translateY(-4px); }
+
+/* cards (books, features) */
+.card {
+  background: rgba(68, 12, 12, 0.92);
+  border-radius:12px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 8px 18px rgba(25,7,20,0.08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(25,7,20,0.12); }
+.card h3 { color:#ffffff; margin-bottom:8px; }
+.card p { color:#ffffff; line-height:1.55; }
+
+/* layout for lists of books */
+.book-grid {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:18px;
+  margin-top:18px;
+}
+
+/* form styles */
+.form {
+  padding:18px;
+  background: rgba(211, 170, 170, 0.95);
+  border-radius:12px;
+  box-shadow: 0 8px 22px rgba(30,8,20,0.06);
+}
+.form label { font-weight:600; color:#3b1a2d; display:block; margin-bottom:6px; }
+.input, textarea, select {
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+  margin-bottom:12px;
+  font-family: inherit;
+  font-size:0.98rem;
+}
+.btn-primary {
+  display:inline-block;
+  padding:10px 18px;
+  background: linear-gradient(90deg,#e3a1e3,#ffd3f1);
+  color:#3b0630;
+  font-weight:700;
+  border-radius:999px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  box-shadow: 0 8px 20px rgba(170,86,150,0.12);
+}
+
+/* small helpers */
+.meta { font-size:0.92rem; color:#7a5368; margin-top:8px; font-weight:600; }
+.section-title { text-align:center; margin:30px 0 12px; font-size:1.8rem; color:#d59591; }
+
+/* responsive */
+@media (max-width:900px) {
+  .book-grid { grid-template-columns: 1fr; }
+  .header h1 { font-size:2rem; }
+  .hero h2 { font-size:1.6rem; }
+  .nav { gap:10px; padding:10px; overflow-x:auto; }
+}

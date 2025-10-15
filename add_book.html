@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Add Book — BookWorm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="header">
+      <h1>BookWorm</h1>
+      <p>Share a recommendation with the community</p>
+    </header>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="recommendations.html">Recommendations</a>
+      <a href="add_book.html">Add Book</a>
+      <a href="search.html">Search</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+      <h2 class="section-title">Add a New Book</h2>
+
+      <form class="form" action="#" method="post">
+        <label>Book Title</label>
+        <input class="input" type="text" name="title" placeholder="e.g. The Great Gatsby" required>
+
+        <label>Author</label>
+        <input class="input" type="text" name="author" placeholder="Author name" required>
+
+        <label>Genre</label>
+        <input class="input" type="text" name="genre" placeholder="Fantasy, Romance, Non-fiction..." required>
+
+        <label>Description</label>
+        <textarea name="description" rows="5" placeholder="Write a short description..." required></textarea>
+
+        <button class="btn-primary" type="submit">Add Book</button>
+      </form>
+    </main>
+
+    <footer style="text-align:center; padding:20px; color:#fff6fb;">
+      BookWorm, Created by Khushi Kumari
+    </footer>
+  </div>
+</body>
+</html>

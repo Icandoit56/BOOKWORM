@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Search — BookWorm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="header">
+      <h1>BookWorm</h1>
+      <p>Search across titles & authors</p>
+    </header>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="recommendations.html">Recommendations</a>
+      <a href="add_book.html">Add Book</a>
+      <a href="search.html">Search</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+      <h2 class="section-title">Search Books</h2>
+
+      <form class="form" action="#" method="get">
+        <label>Title or Author</label>
+        <input class="input" type="text" name="q" placeholder="e.g. Tolkien or The Hobbit" required>
+        <button class="btn-primary" type="submit">Search</button>
+      </form>
+
+      <h3 style="margin-top:26px; color:#fff6fb;">Example results</h3>
+
+      <div class="book-grid">
+        <article class="card">
+          <h3>The Hobbit — J.R.R. Tolkien</h3>
+          <p>Adventure & cozy epic. A perfect gateway to classic high fantasy.</p>
+        </article>
+
+        <article class="card">
+          <h3>It Ends With Us — Colleen Hoover</h3>
+          <p>A sensitive and powerful romance about boundaries and courage.</p>
+        </article>
+      </div>
+    </main>
+
+    <footer style="text-align:center; padding:20px; color:#fff6fb;">
+      BookWorm, Created by Khushi Kumari
+    </footer>
+  </div>
+</body>
+</html>
